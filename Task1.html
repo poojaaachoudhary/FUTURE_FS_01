@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja's - Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("PUBLIC_KEY");
+        })();
+    </script>
+
+    <!-- Internal CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #E0E5DA;
+            color: rgb(26, 25, 25);
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #c08da4;
+            height: 60px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+
+        .navbar .left h3 {
+            font-size: 18px;
+        }
+
+        .navbar .left h6 {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+
+        .navbar ul li a:hover {
+            color: rgb(116, 8, 94);
+        }
+
+        section {
+            padding-top: 80px;
+        }
+
+        main hr {
+            border: 0;
+            background: #c08da4;
+            height: 1.2px;
+            margin: 20px 60px;
+        }
+
+        /* HOME SECTION */
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            min-height: 100vh;
+            /* Home takes full screen height */
+
+        }
+
+        .leftSection,
+        .rightSection {
+            background-color: #e6d2d4;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .picture {
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            border: 2px solid #e6babf;
+            object-fit: cover;
+            image-rendering: auto;
+        }
+
+        .rightSection h1 span {
+            color: rgb(93, 9, 93);
+        }
+
+        .rightSection h3 {
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .rightSection h2 span {
+            color: rgb(95, 20, 95);
+        }
+
+        /* ABOUT */
+        .about h3,
+        .skill h3,
+        .contact h3 {
+            margin: 10px 60px;
+            color: rgb(72, 37, 72);
+            text-transform: uppercase;
+            font-size: 22px;
+
+        }
+
+        .about p {
+            background-color: #e6d2d4;
+            margin: 100px auto;
+            padding: 20px 40px;
+            text-align: center;
+            max-width: 900px;
+            border-radius: 10px;
+        }
+
+        /* SKILLS */
+        .skillName {
+            background-color: #e6d2d4;
+            padding: 40px 20px;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill-block {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .skill-block h4 {
+            color: rgb(93, 42, 93);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skill-list span {
+            background-color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #c08da4;
+        }
+
+        /* CONTACT */
+
+        .contact p {
+            background-color: #e6d2d4;
+            margin: 100px auto;
+            padding: 20px 40px;
+            text-align: center;
+            max-width: 900px;
+            border-radius: 10px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+            gap: 15px;
+        }
+
+        .contact-inputs {
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+            border: 2px solid #c08da4;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+        }
+
+        .contact-form button {
+            width: 120px;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #8c4f66;
+            color: white;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #a76b85;
+        }
+
+        .contact-form button:active {
+            background-color: #8a5a6f;
+        }
+
+        /* RESPONSIVE NAVBAR */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .navbar ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main hr {
+                margin: 20px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">
+
+                <h3>Pooja Choudhary</h3>
+                <h6>Student</h6>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT ME</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                <img src="./assests/main_img.png" alt="image" class="picture">
+            </div>
+            <div class="rightSection">
+                <h1>Hello, I'm <span>Pooja Choudhary</span></h1>
+                <h3>Welcome to my Portfolio</h3>
+                <h2>I am a passionate <span>Web Developer</span></h2>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about" class="secondSection">
+
+            <div class="about">
+                <h3>About Me</h3>
+                <p>
+                    I am Pooja Choudhary, a pre-final year B.Tech Computer Science Engineering student at Sardar Patel
+                    University and a web development enthusiast.
+                    <br>
+                    Currently, I am working as a Full Stack Development Intern at Future Intern, gaining hands-on
+                    experience in real-world web development.
+                    <br>
+                    I aspire to grow as a software engineer by continuously learning modern technologies and building
+                    practical projects.
+                </p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id="skills" class="thirdSection">
+            <div class="skill">
+                <h3>Skills</h3>
+
+                <div class="skillName">
+
+                    <!-- Technical Skills -->
+                    <div class="skill-block">
+                        <h4>Technical Skills</h4>
+                        <div class="skill-list">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>C (Basics)</span>
+                            <span>C++ (Basics)</span>
+                            <span>Python (Basics)</span>
+                        </div>
+                    </div>
+
+                    <!-- Currently Learning -->
+                    <div class="skill-block">
+                        <h4>Currently Learning</h4>
+                        <div class="skill-list">
+                            <span>Full Stack Development</span>
+                            <span>Backend Fundamentals</span>
+                            <span>MS Word</span>
+                            <span>MS Excel</span>
+                            <span>MS PowerPoint</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="fourth-section">
+            <div class="contact">
+                <h3>contact me</h3>
+                <p>
+                    I am available for freelance work. Let’s connect and build something impactful together.
+                </p>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required class="contact-inputs">
+                    <input type="email" name="email" placeholder="Your Email" required class="contact-inputs">
+                    <textarea name="message" placeholder="Your Message" required class="contact-inputs"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Internal JavaScript -->
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm(
+                "SERVICE_ID",
+                "TEMPLATE_ID",
+                this
+            ).then(function () {
+                alert("Message sent successfully!");
+                document.getElementById("contactForm").reset();
+            }, function () {
+                alert("Failed to send message!");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
