@@ -10,12 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
+    <!-- <script>
         (function () {
             emailjs.init("PUBLIC_KEY");
         })();
-    </script>
+    </script> -->
 
     <!-- Internal CSS -->
     <style>
@@ -194,6 +198,38 @@
             border-radius: 10px;
         }
 
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .icons i {
+            background-color: #e6d2d4;
+            height: 50px;
+            width: 50px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            justify-content: center;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #000;
+            transition: all 0.3s ease;
+        }
+
+        .icons i:hover {
+            background-color: #c08da4;
+            color: rgb(26, 25, 25);
+            transform: scale(1.1);
+        }
+
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -324,6 +360,8 @@
                             <span>C (Basics)</span>
                             <span>C++ (Basics)</span>
                             <span>Python (Basics)</span>
+                            <span>MS Word</span>
+                            <span>MS Excel</span>
                         </div>
                     </div>
 
@@ -331,11 +369,8 @@
                     <div class="skill-block">
                         <h4>Currently Learning</h4>
                         <div class="skill-list">
-                            <span>Full Stack Development</span>
-                            <span>Backend Fundamentals</span>
-                            <span>MS Word</span>
-                            <span>MS Excel</span>
-                            <span>MS PowerPoint</span>
+                            <span>MERN Stack</span>
+                            <span>MS Office</span>
                         </div>
                     </div>
 
@@ -351,6 +386,16 @@
                 <p>
                     I am available for freelance work. Let’s connect and build something impactful together.
                 </p>
+
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/pooja-choudhary-701894382"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/poojaaachoudhary" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a><i class="fa-brands fa-whatsapp"></i></a>
+                    <a><i class="fa-brands fa-instagram"></i></a>
+
+                </div>
                 <form id="contactForm" class="contact-form">
                     <input type="text" name="name" placeholder="Your Name" required class="contact-inputs">
                     <input type="email" name="email" placeholder="Your Email" required class="contact-inputs">
@@ -365,7 +410,7 @@
 
     <!-- Internal JavaScript -->
 
-    <script>
+    <!-- <script>
         document.getElementById("contactForm").addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -380,8 +425,9 @@
                 alert("Failed to send message!");
             });
         });
-    </script>
+    </script> -->
 
 </body>
 
 </html>
+
